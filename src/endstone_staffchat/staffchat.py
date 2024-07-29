@@ -1,17 +1,16 @@
 from endstone.plugin import Plugin
 from endstone import ColorFormat
 from endstone.command import *
-from endstone.event import EventPriority, ServerLoadEvent, event_handler
+from endstone.event import event_handler
 from endstone.event import PlayerChatEvent
 from endstone.event import PlayerQuitEvent
-from endstone import Player
 from endstone import Server
 
 
 class StaffChat(Plugin):
-    name = "StaffChat"
+    prefix = "StaffChat"
     version = "0.1.0"
-    api_version = "0.4"
+    api_version = "0.5"
     description = "Talk in staff chat!"
 
     commands = {
