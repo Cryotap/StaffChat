@@ -9,7 +9,7 @@ from endstone import Server
 
 class StaffChat(Plugin):
     prefix = "StaffChat"
-    version = "0.1.0"
+    version = "0.1.1"
     api_version = "0.5"
     description = "Talk in staff chat!"
 
