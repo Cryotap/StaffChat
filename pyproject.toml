@@ -11,4 +11,4 @@ license = { file = "LICENSE" }
 keywords = ["endstone", "plugin", "chat", "staffchat"]
 
 [project.entry-points."endstone"]
-motde = "endstone_staffchat:StaffChat"
+staffchat = "endstone_staffchat:StaffChat"

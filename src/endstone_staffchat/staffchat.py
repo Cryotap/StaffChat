@@ -3,6 +3,7 @@ from endstone import ColorFormat
 from endstone.command import *
 from endstone.event import event_handler
 from endstone.event import PlayerChatEvent
+from endstone import Player
 from endstone.event import PlayerQuitEvent
 from endstone import Server
 
@@ -74,8 +75,7 @@ class StaffChat(Plugin):
 
     def on_command(self, sender: CommandSender, command: Command, args: list[str], cf=cf, sc=sc) -> bool:
         if command.name == "staffchat":
-            player = sender.as_player()
-            if player is not None:
+            if isinstance(sender, Player):
                 if sender.name not in sc:
                     sc.append(str(sender.name))
                     sender.send_message(f"{cf.MATERIAL_DIAMOND}" + "All messages will now be sent to staff chat ")
